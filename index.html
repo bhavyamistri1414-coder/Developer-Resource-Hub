@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Developer Resource Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<header>
+    <h1>Developer Resource Hub</h1>
+    <p>Find useful resources for developers</p>
+
+<button id="themeToggle">🌙 Dark Mode</button>
+
+
+</header>
+
+<section>
+
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search resources..."
+>
+
+<button data-category="All">All</button>
+<button data-category="Web Dev">Web Dev</button>
+<button data-category="App Dev">App Dev</button>
+<button data-category="AI/ML">AI/ML</button>
+<button data-category="Tools">Tools</button>
+
+
+</section>
+
+<main>
+
+
+<div class="resource-card" data-category="Web Dev">
+    <h2>MDN Web Docs</h2>
+    <p>Complete documentation for HTML, CSS and JavaScript.</p>
+    <span>Web Dev</span>
+    <a href="https://developer.mozilla.org/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="Web Dev">
+    <h2>React</h2>
+    <p>A JavaScript library for building user interfaces.</p>
+    <span>Web Dev</span>
+    <a href="https://react.dev/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="Web Dev">
+    <h2>Next.js</h2>
+    <p>A React framework for building fast and modern web applications.</p>
+    <span>Web Dev</span>
+    <a href="https://nextjs.org/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="App Dev">
+    <h2>Flutter</h2>
+    <p>Build applications for multiple platforms from one codebase.</p>
+    <span>App Dev</span>
+    <a href="https://flutter.dev/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="App Dev">
+    <h2>React Native</h2>
+    <p>Build cross-platform mobile applications using React and JavaScript.</p>
+    <span>App Dev</span>
+    <a href="https://reactnative.dev/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="App Dev">
+    <h2>Android Developers</h2>
+    <p>Official resources and documentation for Android app development.</p>
+    <span>App Dev</span>
+    <a href="https://developer.android.com/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="AI/ML">
+    <h2>TensorFlow</h2>
+    <p>An open-source platform for machine learning.</p>
+    <span>AI/ML</span>
+    <a href="https://www.tensorflow.org/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="AI/ML">
+    <h2>PyTorch</h2>
+    <p>An open-source machine learning framework for building and training AI models.</p>
+    <span>AI/ML</span>
+    <a href="https://pytorch.org/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="AI/ML">
+    <h2>Hugging Face</h2>
+    <p>A platform providing AI models, datasets and tools for machine learning.</p>
+    <span>AI/ML</span>
+    <a href="https://huggingface.co/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+<div class="resource-card" data-category="Tools">
+    <h2>GitHub</h2>
+    <p>A platform for hosting, managing and collaborating on software projects.</p>
+    <span>Tools</span>
+    <a href="https://github.com/" target="_blank">
+        Visit Resource
+    </a>
+</div>
+
+
+</main>
+
+<section class="add-resource">
+ 
+<h2>Add a Resource</h2>
+
+<form id="resourceForm">
+
+    <input
+        type="text"
+        id="resourceName"
+        placeholder="Resource name"
+        required
+    >
+
+    <input
+        type="text"
+        id="resourceDescription"
+        placeholder="Description"
+        required
+    >
+
+    <select id="resourceCategory" required>
+        <option value="">Select Category</option>
+        <option value="Web Dev">Web Dev</option>
+        <option value="App Dev">App Dev</option>
+        <option value="AI/ML">AI/ML</option>
+        <option value="Tools">Tools</option>
+    </select>
+
+    <input
+        type="url"
+        id="resourceLink"
+        placeholder="Resource URL"
+        required
+    >
+
+    <button type="submit">Add Resource</button>
+
+</form>
+
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

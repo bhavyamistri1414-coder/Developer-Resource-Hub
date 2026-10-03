@@ -1,0 +1,413 @@
+/* ===============================
+   RESET
+   =============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ===============================
+   BODY
+   =============================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    transition: 0.3s;
+}
+
+
+/* ===============================
+   HEADER
+   =============================== */
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #1f2937;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* ===============================
+   THEME BUTTON
+   =============================== */
+
+#themeToggle {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    color: #1f2937;
+    font-weight: bold;
+}
+
+#themeToggle:hover {
+    opacity: 0.9;
+}
+
+
+/* ===============================
+   SEARCH SECTION
+   =============================== */
+
+section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#searchInput {
+    width: 300px;
+    max-width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+}
+
+
+/* ===============================
+   FILTER BUTTONS
+   =============================== */
+
+section button {
+    padding: 12px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+section button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ===============================
+   RESOURCE GRID
+   =============================== */
+
+main {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    padding: 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* ===============================
+   RESOURCE CARD
+   =============================== */
+
+.resource-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.25s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card h2 {
+    margin-top: 0;
+}
+
+.resource-card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.resource-card span {
+    display: inline-block;
+
+    margin: 10px 0;
+
+    padding: 5px 10px;
+
+    background: #e0e7ff;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+.resource-card a {
+    display: block;
+
+    margin-top: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* ===============================
+   ADD RESOURCE
+   =============================== */
+
+.add-resource {
+    max-width: 600px;
+
+    margin: 40px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-resource h2 {
+    text-align: center;
+}
+
+
+/* ===============================
+   FORM
+   =============================== */
+
+#resourceForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+#resourceForm input,
+#resourceForm select,
+#resourceForm button {
+    padding: 12px;
+
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+}
+
+#resourceForm input:focus,
+#resourceForm select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+#resourceForm button {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+#resourceForm button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ===============================
+   UPVOTE BUTTON
+   =============================== */
+
+.upvote-btn {
+    margin-top: 12px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #16a34a;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.upvote-btn:hover {
+    background: #15803d;
+}
+
+
+/* ===============================
+   DELETE BUTTON
+   =============================== */
+
+.delete-btn {
+    margin-top: 12px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dc2626;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ===============================
+   DARK MODE
+   =============================== */
+
+body.dark-mode {
+    background: #111827;
+
+    color: #f9fafb;
+}
+
+body.dark-mode .resource-card,
+body.dark-mode .add-resource {
+    background: #1f2937;
+
+    color: #f9fafb;
+}
+
+body.dark-mode .resource-card p {
+    color: #d1d5db;
+}
+
+body.dark-mode #searchInput,
+body.dark-mode #resourceForm input,
+body.dark-mode #resourceForm select {
+    background: #374151;
+
+    color: white;
+
+    border-color: #4b5563;
+}
+
+body.dark-mode #themeToggle {
+    background: #374151;
+
+    color: white;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+   =============================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    section button {
+        padding: 10px 14px;
+        margin: 3px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+
+    .resource-card {
+        padding: 20px;
+    }
+
+    .add-resource {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+}
+/* ===============================
+   DARK MODE - EXTRA FIX
+   =============================== */
+
+body.dark-mode section {
+    color: #f9fafb;
+}
+
+body.dark-mode .resource-card span {
+    background: #374151;
+    color: #f9fafb;
+}
+
+body.dark-mode .resource-card a {
+    color: #60a5fa;
+}
+
+body.dark-mode .add-resource input::placeholder {
+    color: #d1d5db;
+}
